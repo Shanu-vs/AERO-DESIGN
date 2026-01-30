@@ -19,11 +19,11 @@ B = 0.94
 # ---------------------
 # FLIGHT CONDITIONS
 # ---------------------
-CRUISE_ALTITUDE = 6000       # ft
-CRUISE_SPEED = 85.0          # m/s
+CRUISE_ALTITUDE = 5000      # ft
+CRUISE_SPEED = 52.5         # m/s
 MAX_SPEED = 110.0            # m/s
-STALL_SPEED = 28.0
-CRUISE_RANGE = 500_000        # m       
+STALL_SPEED = 35.0
+CRUISE_RANGE = 141_750        # m  (speed * time)     
 L_OVER_D = 12.0           # m/s
 
 # ---------------------
@@ -44,14 +44,15 @@ ENGINE_EFF = 0.32
 # ---------------------
 MISSION_TIME = 45 * 60       # seconds
 LOITER_TIME = 5 * 60         # seconds
-RANGE = 100_000              # meters
 
 # ---------------------
 # MISSION SEGMENT FRACTIONS
 # ---------------------
-WARMUP_TAKEOFF = 0.99
-CLIMB = 0.98
-DESCENT_LANDING = 0.995
+WARMUP_TAKEOFF = 0.98
+CLIMB = 0.97
+DESCENT = 0.99
+LANDING = 0.997
+
 
 # ---------------------
 # RESERVE
@@ -61,12 +62,13 @@ reserve_fraction = 0.05       # 5%
 # ---------------------
 # LANDING
 # ---------------------
-STO = 300                      # m 
+STO = 304.8                      # m 
+SL_ft = 1000                   # feet
 
 # ---------------------
 # CLIMBE
 # ---------------------
-ROC = 3.0                      # m/s 
+ROC = 3                     # m/s 
 
 # ---------------------
 # AERODYNAMICS

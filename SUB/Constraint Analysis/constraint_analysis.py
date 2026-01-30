@@ -48,7 +48,12 @@ Vs = cfg.STALL_SPEED
 Vc = 1.5 * Vs
 V_to = 1.2 * Vs
 
-STO = cfg.STO                     # m 
+# Landing parameters (lecture-based)
+SL_ft = cfg.SL_ft                # landing distance in feet (FAR-style)
+CL_max_landing = cfg.CL_MAX  # can be higher if flaps modeled
+
+
+STO = cfg.STO                     # m 7
 ROC = cfg.ROC                     # m/s 
 n = 2.5
 
@@ -69,12 +74,18 @@ TW_cruise = (q * CD0) / WS + (k * WS) / q
 # Climb
 TW_climb = TW_cruise + ROC / Vc
 
-# Sustained turn
-q_sl = 0.5 * cfg.RHO_SL * Vc**2
-TW_turn = (q_sl * CD0) / WS + (k * n**2 * WS) / q_sl
+q_turn = 0.5 * rho * Vc**2   # use rho, NOT rho_sl
+TW_turn = (q_turn * CD0) / WS + (k * n**2 * WS) / q_turn
 
 # Jet take-off (horizontal line)
 TW_takeoff = (V_to**2) / (2 * g * STO)
+
+# Density ratio
+sigma = rho / cfg.RHO_SL
+
+# Landing constraint (vertical line)
+WS_landing = 47.88 * ((SL_ft - 400) / 118) * sigma * CL_max_landing
+
 
 # ==========================================================
 # PLOTTING
@@ -86,6 +97,12 @@ ax.plot(WS, TW_climb, label="Climb", color="red")
 ax.plot(WS, TW_turn, label="Sustained Turn", color="blue")
 ax.plot(WS, TW_cruise, label="Cruise", color="green")
 
+ax.axvline(
+    WS_landing,
+    linestyle="--",
+    color="brown",
+    label="Landing"
+)
 ax.axvline(WS_stall, linestyle="--", color="black", label="Stall")
 
 ax.set_xlabel("Wing Loading W/S (N/m²)")

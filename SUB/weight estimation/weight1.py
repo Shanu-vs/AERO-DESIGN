@@ -50,7 +50,7 @@ mission_weight_fraction = (
     cfg.CLIMB *
     cruise_fraction *
     loiter_fraction *
-    cfg.DESCENT_LANDING
+    cfg.DESCENT * cfg.LANDING
 )
 
 # =====================================================
@@ -81,6 +81,7 @@ print(f"Cruise Speed                     : {cfg.CRUISE_SPEED:.1f} m/s")
 print(f"L/D                              : {cfg.L_OVER_D:.1f}")
 print(f"Loiter Time                      : {cfg.LOITER_TIME/60} min")
 print(f"TSFC                             : {cfg.TSFC:.3f} kg/(N·hr)")
+print(f"SFC                              : {c} kg/(N·hr)")
 print(f"Reserve Fuel                     : {cfg.reserve_fraction*100:.0f} %")
 
 print("\n--- EMPTY WEIGHT ---")
