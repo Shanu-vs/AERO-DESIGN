@@ -20,11 +20,11 @@ B = 1-0.028
 # FLIGHT CONDITIONS
 # ---------------------
 CRUISE_ALTITUDE = 5000      # ft
-CRUISE_SPEED = 51.44 *1.5      # m/s
+CRUISE_SPEED =55.5     # m/s
 MAX_SPEED = 110.0            # m/s
 STALL_SPEED = 29.0
-CRUISE_RANGE = 138_880*1.5       # m  (speed * time)     
-L_OVER_D = 12.0           # m/s
+CRUISE_RANGE = 309_500       # m  (speed * time)     
+L_OVER_D = 14.0           # m/s
 
 # ---------------------
 # ATMOSPHERE
@@ -39,6 +39,11 @@ RHO_CRUISE = 1.056
 MAX_THRUST = 425.0           # N
 TSFC = 0.157                 # 1/hr
 ENGINE_EFF = 0.32
+
+# ---------------------
+# Fuel 
+# ---------------------
+FUEL_WEIGHT = 14             # kg
 
 # ---------------------
 # MISSION
