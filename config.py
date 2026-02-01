@@ -13,17 +13,17 @@ ASPECT_RATIO = 8.0
 OSWALD_EFF = 0.8
 
 # Raymer empty weight regression (jet UAV)
-A = 0.86
-B = 0.94
+A = 0.6091
+B = 1-0.028
 
 # ---------------------
 # FLIGHT CONDITIONS
 # ---------------------
 CRUISE_ALTITUDE = 5000      # ft
-CRUISE_SPEED = 52.5         # m/s
+CRUISE_SPEED = 51.44 *1.5      # m/s
 MAX_SPEED = 110.0            # m/s
-STALL_SPEED = 35.0
-CRUISE_RANGE = 141_750        # m  (speed * time)     
+STALL_SPEED = 29.0
+CRUISE_RANGE = 138_880*1.5       # m  (speed * time)     
 L_OVER_D = 12.0           # m/s
 
 # ---------------------
@@ -31,6 +31,7 @@ L_OVER_D = 12.0           # m/s
 # ---------------------
 RHO_SL = 1.225               # kg/m^3
 G = 9.81                     # m/s^2
+RHO_CRUISE = 1.056
 
 # ---------------------
 # ENGINE PARAMETERS
