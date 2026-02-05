@@ -7,7 +7,7 @@ MTOW = 80.0
 EMPTY_WEIGHT = 44.0
 G = 9.81
 
-TOTAL_FUEL = 20
+TOTAL_FUEL = 15
 RESERVE_FRACTION = 0.05
 
 # =====================================================

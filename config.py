@@ -8,8 +8,8 @@
 # UAV BASIC PARAMETERS
 # ---------------------
 MTOW = 80.0                  # kg
-WING_AREA = 1.2              # m^2
-ASPECT_RATIO = 8.0
+WING_AREA = 2.711              # m^2
+ASPECT_RATIO = 9.3
 OSWALD_EFF = 0.8
 
 # Raymer empty weight regression (jet UAV)
@@ -22,7 +22,7 @@ B = 1-0.028
 CRUISE_ALTITUDE = 5000      # ft
 CRUISE_SPEED =55.5     # m/s
 MAX_SPEED = 110.0            # m/s
-STALL_SPEED = 29.0
+STALL_SPEED = 23.0
 CRUISE_RANGE = 309_500       # m  (speed * time)     
 L_OVER_D = 14.0           # m/s
 

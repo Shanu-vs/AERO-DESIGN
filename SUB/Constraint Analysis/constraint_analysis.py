@@ -38,6 +38,7 @@ a   = np.interp(h, atm[ALT], atm[A])
 # ==========================================================
 g = cfg.G
 W = cfg.MTOW * g
+TW_available = 0.541539  # T/W
 
 CL_max = cfg.CL_MAX
 CD0 = cfg.CD0
@@ -96,6 +97,11 @@ ax.plot(WS, TW_takeoff * np.ones_like(WS), label="Take-off (Jet)", color="magent
 ax.plot(WS, TW_climb, label="Climb", color="red")
 ax.plot(WS, TW_turn, label="Sustained Turn", color="blue")
 ax.plot(WS, TW_cruise, label="Cruise", color="green")
+
+
+plt.axhline(y=TW_available, color='black', linestyle='--', linewidth=2, label='1 engine T/W')
+plt.legend()
+
 
 ax.axvline(
     WS_landing,
