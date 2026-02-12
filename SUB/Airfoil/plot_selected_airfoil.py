@@ -13,8 +13,8 @@ alpha = np.linspace(-8, 18, 400)
 
 AIRFOILS = {
     "MH61": "SUB/Airfoil/Data/mh61.dat",
-    "MH62": "SUB/Airfoil/Data/mh62.dat",
     "MH60": "SUB/Airfoil/Data/mh60.dat",
+    "E184": "SUB/Airfoil/Data/e184.dat",
 }
 
 # =========================================================
