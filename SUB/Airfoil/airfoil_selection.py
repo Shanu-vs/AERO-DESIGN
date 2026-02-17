@@ -61,7 +61,7 @@ def average_cruise_weight(Wi, Wf):
 
 def ideal_cruise_lift_coefficient(W_avg, rho, V, S):
     return (2 * W_avg) / (rho * V**2 * S)
-
+ 
 
 def wing_cruise_lift_coefficient(C_lc):
     return C_lc / 0.95

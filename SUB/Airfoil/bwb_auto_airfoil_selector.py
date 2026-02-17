@@ -7,7 +7,7 @@ import os
 # FLIGHT CONDITION (from your aircraft sizing)
 # -------------------------------------------------------
 Re = 1.768e6
-CL_CRUISE = 0.1625
+CL_CRUISE = 0.1579
 alpha = np.linspace(-8, 18, 500)
 
 AIRFOIL_FOLDER = "SUB/Airfoil/Data"
@@ -160,3 +160,27 @@ print("Mid  :  0°")
 print("Tip  : -2.5°")
 
 print("\n(Ensures trim stability + root-first stall + controllability)")
+
+
+import json
+import os
+
+# -------------------------------------------------------
+# SAVE SELECTED AIRFOILS INSIDE SUB/Airfoil/
+# -------------------------------------------------------
+
+AIRFOIL_SAVE_FOLDER = "SUB/Airfoil"
+os.makedirs(AIRFOIL_SAVE_FOLDER, exist_ok=True)
+
+selected_path = os.path.join(AIRFOIL_SAVE_FOLDER, "selected_airfoils.json")
+
+selected_airfoils = {
+    "root": root,
+    "mid": mid,
+    "tip": tip
+}
+
+with open(selected_path, "w") as f:
+    json.dump(selected_airfoils, f, indent=4)
+
+print(f"\nSelected airfoils saved to {selected_path}")

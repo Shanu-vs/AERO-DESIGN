@@ -9,7 +9,7 @@
 # ---------------------
 MTOW = 80.0                  # kg
 WING_AREA = 2.711              # m^2
-ASPECT_RATIO = 9.3
+ASPECT_RATIO = 11.73
 OSWALD_EFF = 0.8
 
 # Raymer empty weight regression (jet UAV)
@@ -31,7 +31,7 @@ L_OVER_D = 14.0           # m/s
 # ---------------------
 RHO_SL = 1.225               # kg/m^3
 G = 9.81                     # m/s^2
-RHO_CRUISE = 1.056
+RHO_CRUISE = 1.0556
 
 # ---------------------
 # ENGINE PARAMETERS
@@ -43,7 +43,7 @@ ENGINE_EFF = 0.32
 # ---------------------
 # Fuel 
 # ---------------------
-FUEL_WEIGHT = 14             # kg
+FUEL_WEIGHT = 18.14             # kg
 
 # ---------------------
 # MISSION
