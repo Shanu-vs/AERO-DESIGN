@@ -9,7 +9,7 @@
 # ---------------------
 MTOW = 80.0                  # kg
 WING_AREA = 2.711              # m^2
-ASPECT_RATIO = 11.73
+ASPECT_RATIO = 9.36
 OSWALD_EFF = 0.8
 
 # Raymer empty weight regression (jet UAV)
